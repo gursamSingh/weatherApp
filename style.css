@@ -15,17 +15,26 @@ body{
 .container{
     position: relative;
     width: 32rem;
-    height: 45rem;
+    height: 15rem;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 1rem;
-    transition: ease-out;
     box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
-    animation-name: fadeIn;
+    animation-name: pop-up;
     animation-duration: 1s;
+}
+
+.not-active{
+    height: 30rem;
+    transition: height 0.5s;
+}
+
+.active{
+    height: 60rem;
+    transition: height 0.5s;
 }
 
 .search-bar{
@@ -49,19 +58,25 @@ body{
 
 .search-box{
     position: absolute;
-    height: 2rem;
+    height: 2.5rem;
     width: 18.5rem;
     left: 6rem;
-    font-size: 2rem;
-    border: none;
+    font-size: 1.5rem;
     text-align: center;
     text-transform: uppercase;
+    outline: none;
+    border-radius: 1rem;
+}
+
+::placeholder{
+    color: black;
+    opacity: 1;
 }
 
 .search-button{
     cursor: pointer;
     position: absolute;
-    right: 2rem;
+    right: 1.5rem;
     height: 3rem;
     width: 3rem;
     border: none;
@@ -79,46 +94,48 @@ body{
 }
 
 .weatherCtn{
-    height: 25rem;
+    height: 40rem;
     width: 30rem;
     background-color: white;
     border-radius: 1rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 8rem;
-
+    text-align: center;
 }
 
 .weather-img{
-    height: 15rem;
+    height: 25rem;
     width: 28rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-left: 1rem;
     border-radius: 1rem;
 }
 
 .temperature{
-    margin-top: 1rem;
-    margin-left: 1rem;
-    font-size: 2rem;
+    font-size: 4rem;
+    position: absolute;
+    left: 10rem;
+    top: 23rem;
 }
 
-.descripiton{
-    margin-top: 1rem;
-    margin-left: 1rem;
-    font-size: 2rem;
+.description{
+    font-size: 3rem;
+    position: absolute;
+    left: 11.5rem;
+    top: 30rem;
 }
 
 
 .weather-detailCtn{
-    height: 5rem;
+    height: 3rem;
     width: 30rem;
     background-color: white;
     border-radius: 1rem;
-    display: flex;
+    display: none;
     position: absolute;
-    top: 35rem;
+    top: 50rem;
 }
 
 
@@ -126,41 +143,73 @@ body{
     position: absolute;
     left: 1rem;
     top: 0.5rem;
+    display: flex;
+}
+
+.humidity i{
     font-size: 2rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.humidity span{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.humidity p {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0.5rem;
 }
 
 .wind{
     position: absolute;
     right: 1rem;
     top: 0.5rem;
-    font-size: 2rem;
+    display: flex;
 }
 
+.wind i{
+    font-size: 2rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.wind span{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.wind p {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0.5rem;
+}
 
 .not-found{
-    width: 100%;
-    text-align: center;
-    margin-top: 50px;
-    scale: 0;
-    opacity: 0;
+    position: relative;
+    top: 3rem;
     display: none;
 }
 
 .not-found img{
-    width: 70%;
+    height: 12rem;
 }
+
 
 .not-found p{
     color: #06283D;
     font-size: 22px;
     font-weight: 500;
-    margin-top: 12px;
 }
 
 
-@keyframes fadeIn{
+@keyframes pop-up{
     from{
         scale: 0;
         opacity: 1;
     }
 }
+
+
