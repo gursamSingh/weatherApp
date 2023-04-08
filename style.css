@@ -15,7 +15,7 @@ body{
 .container{
     position: relative;
     width: 32rem;
-    height: 15rem;
+    height: 10rem;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -33,7 +33,7 @@ body{
 }
 
 .active{
-    height: 60rem;
+    height: 45rem;
     transition: height 0.5s;
 }
 
@@ -94,7 +94,6 @@ body{
 }
 
 .weatherCtn{
-    height: 40rem;
     width: 30rem;
     background-color: white;
     border-radius: 1rem;
@@ -106,36 +105,30 @@ body{
 }
 
 .weather-img{
-    height: 25rem;
-    width: 28rem;
+    height: 15rem;
+    width: 15rem;
     margin-top: 1rem;
-    margin-left: 1rem;
+    margin-left: 7.5rem;
     border-radius: 1rem;
 }
 
 .temperature{
-    font-size: 4rem;
-    position: absolute;
-    left: 10rem;
-    top: 23rem;
+    font-size: 2.5rem;
 }
 
 .description{
-    font-size: 3rem;
-    position: absolute;
-    left: 11.5rem;
-    top: 30rem;
+    font-size: 2.5rem;
 }
 
 
 .weather-detailCtn{
-    height: 3rem;
+    height: 7rem;
     width: 30rem;
     background-color: white;
     border-radius: 1rem;
     display: none;
     position: absolute;
-    top: 50rem;
+    top: 38rem;
 }
 
 
@@ -211,5 +204,7 @@ body{
         opacity: 1;
     }
 }
+
+
 
 

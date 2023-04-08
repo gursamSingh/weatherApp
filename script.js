@@ -68,7 +68,7 @@ searchBtn.addEventListener('click',()=>{
 
 
         temperature.innerHTML = `${parseInt(data.main.temp)}<span>°C</span>`;
-        description.innerHTML = `${data.weather[0].main}`;
+        description.innerHTML = `${data.weather[0].description}`;
         humidity.innerHTML = `${data.main.humidity}%`;
         wind.innerHTML = `${parseInt(data.wind.speed)}Km/h`;
 
